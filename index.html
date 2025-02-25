@@ -16,18 +16,7 @@
 	</head>
 	<body class="is-preload">
 
-		<script>
-  			$(document).ready(function(){
-   			 // Add smooth scrolling to all links with hashes
-   			 $('a[href*="#"]').on('click', function(e) {
-     		 var target = $(this).attr('href');
-     		 $('html, body').animate({
-      		  scrollTop: $(target).offset().top
-     		 }, 600);
-      e.preventDefault();
-    });
-  });
-</script>
+		
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -54,13 +43,14 @@
  				 </div>
 				</nav>
 
-				<nav id="top-menu">
+				<nav id="new-page-nav">
 					<ul>
-						<li><a href="#upcoming-ranges">Upcoming Ranges</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="#sale-items">Sale Items</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="upcoming-ranges.html">Upcoming Ranges</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="sale-items.html">Sale Items</a></li>
 					</ul>
-				</nav>
+			</nav>
 
 				<!-- Banner -->
 					<section id="banner">
@@ -151,7 +141,7 @@
 							</section>
 
 					</section>
-
+					<button id="scrollToTopBtn">Back to Top</button> 
 				<!-- Footer -->
 				<section id="sign-up">
  				 <h2>Sign Up</h2>
@@ -206,6 +196,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+  			$(document).ready(function(){
+   			 // Add smooth scrolling to all links with hashes
+   			 $('a[href*="#"]').on('click', function(e) {
+     		 var target = $(this).attr('href');
+     		 $('html, body').animate({
+      		  scrollTop: $(target).offset().top
+     		 }, 600);
+      		e.preventDefault();
+    			});
+  			});
+			</script>
 	</body>
 </html>

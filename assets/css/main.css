@@ -3180,20 +3180,21 @@ input, select, textarea {
 /* Header */
 
 /* Header */
+/* Header (Dark Grey, Visible Above #new-page-nav) */
 #header {
 	-moz-transition: background-color 0.2s ease-in-out;
 	-webkit-transition: background-color 0.2s ease-in-out;
 	-ms-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
-	background-color: #353849; /* Solid dark grey, matching Solid State’s #353849 */
+	background-color: #353849; /* Solid dark grey, unchanged */
 	height: 3.5em;
 	left: 0;
 	line-height: 3.5em;
 	padding: 0 1.25em;
 	position: fixed;
-	top: 3.5em; /* Adjust to sit below the #top-menu (3.5em height) */
+	top: 0; /* Keep at top */
 	width: 100%;
-	z-index: 9999; /* Below #top-menu (z-index: 9999) but above content */
+	z-index: 10001; /* Increase to stay above #new-page-nav (z-index: 9998) */
 }
 
 	#header h1 {
@@ -4271,3 +4272,111 @@ input, select, textarea {
 
 	}
 	
+//* New Page Navigation Styles */
+#new-page-nav {
+	background-color: #ffffff;
+	padding: 1em 0;
+	position: fixed;
+	top: 3.5em; /* Position below the dark grey #header (3.5em height) */
+	left: 0;
+	width: 100%;
+	z-index: 9999; /* Lower to stay below #header (z-index: 10001) */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#new-page-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+#new-page-nav li {
+	margin: 0 1.5em;
+}
+
+#new-page-nav a {
+	color: #2e3141;
+	font-family: Raleway, Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+#new-page-nav a:hover {
+	color: #4c5c96; /* Blue hover state, matching Solid State primary color */
+}
+
+@media screen and (max-width: 736px) {
+	#new-page-nav {
+			padding: 0.5em 0;
+			top: 2.75em; /* Adjust for mobile #header height */
+	}
+
+	#new-page-nav li {
+			margin: 0 1em;
+	}
+
+	#new-page-nav a {
+			font-size: 0.7em;
+	}
+}
+
+#new-page-nav {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
+
+#new-page-nav {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+}
+#new-page-nav a {
+	color: #2e3141 !important; /* Dark color for visibility on a white background */
+}
+
+#header {
+	position: relative;
+	z-index: 10001; /* Ensure header is above nav */
+}
+#new-page-nav {
+	position: static;
+	top: 3.5em; /* Adjust based on header height */
+	left: 0;
+	width: 100%;
+	z-index: 9999; /* Below header but above content */
+	background: #fff; /* White background if not already set */
+}
+
+#new-page-nav a:hover {
+	color: #4c5c96 !important; 
+	text-decoration: underline;/* Blue on hover */
+}
+
+#new-page-nav {
+	margin-top: 5px; /* Replace 60px with your navbar’s actual height */
+}
+
+#scrollToTopBtn {
+  display: none; /* Hide button initially */
+  position: fixed; 
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; 
+  border: none;
+  outline: none;
+  background-color: #4c5c96; /* Example color */
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #53639e; /* Example hover color */
